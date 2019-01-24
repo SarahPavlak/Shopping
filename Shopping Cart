@@ -27,9 +27,22 @@ products = [
 
 print(products)
 
+print("Shopping Cart")
+
 # an infinite loop! you can press control+c to cancel the program if/when it gets stuck...
+
+l=[]
+
 while True:
     # capturing user input and storing in a variable
     user_input = input("Please input a product identifier, or 'DONE' if there are no more items: ")
+    if user_input == "DONE":
+        print (l)
+        break
+    else:
+        l.append(user_input) 
+        print("Your Input was:" + " " + user_input)
+
+
+
     # demonstrating ability to recognize what the input was, although you might also want to check its datatype
-    print("YOUR INPUT WAS: " + user_input)

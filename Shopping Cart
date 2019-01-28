@@ -52,14 +52,23 @@ while True:
         def sort_by_name(any_product):
             return any_product ["name"]
         sorted_products = sorted(products,key=sort_by_name)
-        
+
         for p in sorted_products:
             #price_usd = p["price"]
             price_usd = "${0: .2f}".format(p["price"])
             print("+ " + p["name"] + " (" + str (price_usd) + ")") 
+
+        print ("---------------------")
+        print ("Subtotal: ")
+        print ("Sales Tax: ")
+        print ("Total: ")
+
+        print ("---------------------")
+        print ("Thank you for your business, please come again!")
 
         break
 
     else:
         l.append(user_input) 
         #print("Your Input was:" + " " + user_input)
+       

@@ -32,18 +32,34 @@ print("Shopping Cart")
 # an infinite loop! you can press control+c to cancel the program if/when it gets stuck...
 
 l=[]
+def checkout_time(any_products):
+   return any_product ["name"]
 
 while True:
     # capturing user input and storing in a variable
     user_input = input("Please input a product identifier, or 'DONE' if there are no more items: ")
     if user_input == "DONE":
         print ("---------------------")
+        print ("Sarah's Grocery Store")
+        print ("---------------------")
+        print ("Web: Sarah.Grocery.Store.com")
+        print ("Phone: 123-456-7890")
+        print ("Checkout Time:" + str(checkout_time))
+        print ("---------------------")
+
         print (l)
+
+        def sort_by_name(any_product):
+            return any_product ["name"]
+        sorted_products = sorted(products,key=sort_by_name)
+        
+        for p in sorted_products:
+            #price_usd = p["price"]
+            price_usd = "${0: .2f}".format(p["price"])
+            print("+ " + p["name"] + " (" + str (price_usd) + ")") 
+
         break
 
     else:
         l.append(user_input) 
         #print("Your Input was:" + " " + user_input)
-
-
-    # demonstrating ability to recognize what the input was, although you might also want to check its datatype

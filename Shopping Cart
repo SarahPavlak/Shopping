@@ -1,5 +1,7 @@
 # shopping_cart.py
 
+import datetime
+
 products = [
     {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
     {"id":2, "name": "All-Seasons Salt", "department": "pantry", "aisle": "spices seasonings", "price": 4.99},
@@ -35,6 +37,8 @@ l=[]
 def checkout_time(any_products):
    return any_product ["name"]
 
+t = datetime.datetime.now()
+
 while True:
     # capturing user input and storing in a variable
     user_input = input("Please input a product identifier, or 'DONE' if there are no more items: ")
@@ -44,7 +48,7 @@ while True:
         print ("---------------------")
         print ("Web: Sarah.Grocery.Store.com")
         print ("Phone: 123-456-7890")
-        print ("Checkout Time:" + str(checkout_time))
+        print ("Checkout Time: " + str(t))
         print ("---------------------")
 
         print (l)
@@ -71,4 +75,3 @@ while True:
     else:
         l.append(user_input) 
         #print("Your Input was:" + " " + user_input)
-       

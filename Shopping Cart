@@ -57,15 +57,28 @@ while True:
             return any_product ["name"]
         sorted_products = sorted(products,key=sort_by_name)
 
+        running_total = 0
+        selected_id = 1
+
+        matching_products = [p for p in products if p["id"] == selected_id]
+
+        product = matching_products[0]
+        price = product["price"]
+
+        running_total = running_total + price
+
         for p in sorted_products:
             #price_usd = p["price"]
             price_usd = "${0: .2f}".format(p["price"])
             print("+ " + p["name"] + " (" + str (price_usd) + ")") 
 
+        running_total_tax = running_total * .18
+        total = running_total_tax + running_total 
+
         print ("---------------------")
-        print ("Subtotal: ")
-        print ("Sales Tax: ")
-        print ("Total: ")
+        print ("Subtotal: " + str(running_total))
+        print ("Sales Tax: " + str(running_total_tax))
+        print ("Total: " + str(total))
 
         print ("---------------------")
         print ("Thank you for your business, please come again!")
@@ -75,3 +88,9 @@ while True:
     else:
         l.append(user_input) 
         #print("Your Input was:" + " " + user_input)
+       
+       
+
+        
+        
+

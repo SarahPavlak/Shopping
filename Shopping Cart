@@ -27,7 +27,7 @@ products = [
 
 # TODO: write some Python code here to produce the desired functionality...
 
-print(products)
+#print(products)
 
 print("Shopping Cart")
 
@@ -51,16 +51,15 @@ while True:
         print ("Checkout Time: " + str(t))
         print ("-------------------------------------------")
 
-        print (l)
+        #print (l)
 
         def sort_by_name(any_product):
             return any_product["name"]
         sorted_products = sorted(products,key=sort_by_name)
 
         running_total = 0
-        selected_id = 2  ##something on this line has to change to match the input
 
-        matching_products = [p for p in products if p["id"] == selected_id]
+        matching_products = [p for p in products if p["id"] in l]
         
         product = matching_products[0]
         price = (product["price"]) 
@@ -75,20 +74,17 @@ while True:
         running_total_tax = running_total * .18
         total = running_total_tax + running_total 
 
-        print ("------------------------------------")
+        print ("-------------------------------------------")
         print ("Subtotal: " + str(running_total))
         print ("Sales Tax: " + str(running_total_tax))
         print ("Total: " + str(total))
 
-        print ("-------------------------------------")
+        print ("-------------------------------------------")
         print ("Thank you for your business, please come again!")
 
         break
 
     else:
-        l.append(user_input) 
+        l.append(int(user_input)) 
         #print("Your Input was:" + " " + user_input)
-
-        
-        
 

@@ -27,11 +27,8 @@ products = [
 
 # TODO: write some Python code here to produce the desired functionality...
 
-#print(products)
-
 print("Shopping Cart")
 
-# an infinite loop! you can press control+c to cancel the program if/when it gets stuck...
 
 l=[]
 def checkout_time(any_products):

@@ -73,6 +73,7 @@ while True:
         print ("Subtotal: " + str(running_total))
         print ("Sales Tax: " + str(running_total_tax))
         print ("Total: " + str(total))
+        print ("You have purchased " + str(len(l)) + " items")
 
         print ("-------------------------------------------")
         print ("Thank you for your business, please come again!")
@@ -80,4 +81,4 @@ while True:
         break
 
     else:
-        l.append(int(user_input)) 
+        l.append(int(user_input))

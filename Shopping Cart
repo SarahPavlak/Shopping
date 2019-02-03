@@ -49,14 +49,11 @@ while True:
         def sort_by_name(any_product):
             return any_product["name"]
         sorted_products = sorted(products,key=sort_by_name)
-
-        running_total = 0
+        
         matching_products = [p for p in products if p["id"] in l]
         
         product = matching_products[0]
         price = (product["price"]) 
-
-        running_total = running_total + price
 
         sum = 0
         for p in matching_products:
